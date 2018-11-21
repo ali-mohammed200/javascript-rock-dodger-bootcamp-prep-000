@@ -131,14 +131,12 @@ function endGame() {
 
 function moveDodger(e) {
   // implement me!
-  document.addEventListener('keydown', function(e) {
     if (e.which === 37) {
       moveDodgerLeft()
     }
     else if(e.which === 39){
       moveDodgerRight();
     }
-  })
   /**
    * This function should call `moveDodgerLeft()`
    * if the left arrow is pressed and `moveDodgerRight()`
@@ -150,6 +148,12 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   // implement me!
+  var leftNumbers = dodger.style.left.replace('px', '')
+  var left = parseInt(leftNumbers, 10)
+
+  if (left > 0) {
+    dodger.style.left = `${left - 4}px`
+  }
   /**
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
