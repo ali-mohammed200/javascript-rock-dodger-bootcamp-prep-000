@@ -81,16 +81,16 @@ function createRock(x) {
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
-    //  if(checkCollision(rock)){
-    //    endGame();
-    //  } else if(top === 400) {
-    //      GAME.removeChild(rock);
-    //  } else {
+     if(checkCollision(rock)){
+       endGame();
+     } else if(top === 400) {
+         GAME.removeChild(rock);
+     } else {
        rock.style.top += `${top += 20}px`;
        if (top < 400) {
          window.requestAnimationFrame(moveRock);
         }
-     //}
+     }
 
 
     /**
