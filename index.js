@@ -128,6 +128,8 @@ function endGame() {
     ROCKS[i].remove();
   }
   window.removeEventListener('keydown', moveDodger);
+  START.innerHTML = 'Play again?';
+  START.style.display = 'inline';
   alert(`YOU LOSE!`);
 }
 
