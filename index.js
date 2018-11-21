@@ -83,10 +83,10 @@ function createRock(x) {
      */
      if(checkCollision(rock)){
        endGame();
-     } else if(rock.style.top === 400) {
+     } else if(top === 400) {
          GAME.removeChild(rock);
      } else {
-       rock.style.top += 20;
+       top += 20;
       //  if (top < 400) {
       //    window.requestAnimationFrame(moveRock);
       //   }
