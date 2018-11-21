@@ -84,7 +84,7 @@ function createRock(x) {
      * we should call endGame()
      */
      if(checkCollision(rock)){
-       endGame();
+       return endGame();
      } else if(top === 400) {
          GAME.removeChild(rock);
      } else {
