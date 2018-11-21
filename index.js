@@ -135,15 +135,17 @@ function moveDodger(e) {
   // implement me!
   var leftNumbers = dodger.style.left.replace('px', '');
   var left = parseInt(leftNumbers, 10);
-  
+
     if (e.which === LEFT_ARROW) {
       moveDodgerLeft()
       window.requestAnimationFrame(moveDodgerLeft);
     }
     else if(e.which === RIGHT_ARROW){
       moveDodgerRight();
-      window.requestAnimationFrame(moveDodgerLeft);
+      window.requestAnimationFrame(moveDodgerRight);
     }
+          window.requestAnimationFrame(moveDodgerLeft);
+          window.requestAnimationFrame(moveDodgerRight);
   /**
    * This function should call `moveDodgerLeft()`
    * if the left arrow is pressed and `moveDodgerRight()`
