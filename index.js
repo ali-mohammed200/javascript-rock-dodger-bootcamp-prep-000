@@ -133,11 +133,16 @@ function endGame() {
 
 function moveDodger(e) {
   // implement me!
+  var leftNumbers = dodger.style.left.replace('px', '');
+  var left = parseInt(leftNumbers, 10);
+  
     if (e.which === LEFT_ARROW) {
       moveDodgerLeft()
+      window.requestAnimationFrame(moveDodgerLeft);
     }
     else if(e.which === RIGHT_ARROW){
       moveDodgerRight();
+      window.requestAnimationFrame(moveDodgerLeft);
     }
   /**
    * This function should call `moveDodgerLeft()`
@@ -150,11 +155,9 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   // implement me!
-  var leftNumbers = dodger.style.left.replace('px', '')
-  var left = parseInt(leftNumbers, 10)
-
+  dodger.style.left = `${left - 4}px`;
   if (left > 0) {
-    dodger.style.left = `${left - 4}px`
+    window.requestAnimationFrame(moveDodgerLeft);
   }
   /**
    * This function should move DODGER to the left
@@ -164,11 +167,9 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   // implement me!
-  var leftNumbers = dodger.style.left.replace('px', '')
-  var left = parseInt(leftNumbers, 10)
-
+  dodger.style.left = `${left + 4}px`;
   if (left < 360) {
-    dodger.style.left = `${left + 4}px`
+    window.requestAnimationFrame(moveDodgerRight);
   }
   /**
    * This function should move DODGER to the right
