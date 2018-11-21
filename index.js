@@ -231,3 +231,18 @@ document.addEventListener('keydown', function(e) {
 })
 
 */
+/*
+function move(el) {
+  var top = 0
+ 
+  function step() {
+    el.style.top = `${top += 2}px`
+ 
+    if (top < 200) {
+      window.requestAnimationFrame(step)
+    }
+  }
+ 
+  window.requestAnimationFrame(step)
+}
+*/
