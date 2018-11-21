@@ -87,9 +87,9 @@ function createRock(x) {
          GAME.removeChild(rock);
      } else {
        rock.style.top += `${top += 20}px`;
-      //  if (top < 400) {
-      //    window.requestAnimationFrame(moveRock);
-      //   }
+       if (top < 400) {
+         window.requestAnimationFrame(moveRock);
+        }
      }
 
 
