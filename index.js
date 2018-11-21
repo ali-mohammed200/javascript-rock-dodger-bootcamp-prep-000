@@ -133,19 +133,12 @@ function endGame() {
 
 function moveDodger(e) {
   // implement me!
-  var leftNumbers = dodger.style.left.replace('px', '');
-  var left = parseInt(leftNumbers, 10);
-
     if (e.which === LEFT_ARROW) {
       moveDodgerLeft()
-      window.requestAnimationFrame(moveDodgerLeft);
     }
     else if(e.which === RIGHT_ARROW){
       moveDodgerRight();
-      window.requestAnimationFrame(moveDodgerRight);
     }
-          window.requestAnimationFrame(moveDodgerLeft);
-          window.requestAnimationFrame(moveDodgerRight);
   /**
    * This function should call `moveDodgerLeft()`
    * if the left arrow is pressed and `moveDodgerRight()`
@@ -157,9 +150,11 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   // implement me!
-  dodger.style.left = `${left - 4}px`;
+  var leftNumbers = dodger.style.left.replace('px', '')
+  var left = parseInt(leftNumbers, 10)
+
   if (left > 0) {
-    window.requestAnimationFrame(moveDodgerLeft);
+    dodger.style.left = `${left - 4}px`
   }
   /**
    * This function should move DODGER to the left
@@ -169,9 +164,11 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   // implement me!
-  dodger.style.left = `${left + 4}px`;
+  var leftNumbers = dodger.style.left.replace('px', '')
+  var left = parseInt(leftNumbers, 10)
+
   if (left < 360) {
-    window.requestAnimationFrame(moveDodgerRight);
+    dodger.style.left = `${left + 4}px`
   }
   /**
    * This function should move DODGER to the right
