@@ -133,9 +133,6 @@ function endGame() {
 
 function moveDodger(e) {
   // implement me!
-  var leftNumbers = dodger.style.left.replace('px', '')
-  var left = parseInt(leftNumbers, 10)
-
     if (e.which === LEFT_ARROW) {
       moveDodgerLeft()
     }
@@ -153,7 +150,8 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   // implement me!
-
+  var leftNumbers = dodger.style.left.replace('px', '')
+  var left = parseInt(leftNumbers, 10)
 
   if (left > 0) {
     dodger.style.left = `${left - 4}px`
@@ -166,6 +164,8 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   // implement me!
+  var leftNumbers = dodger.style.left.replace('px', '')
+  var left = parseInt(leftNumbers, 10)
 
   if (left < 360) {
     dodger.style.left = `${left + 4}px`
