@@ -125,12 +125,20 @@ function endGame() {
   for(let i = 0; i < ROCKS.length; i++){
     GAME.removeChild(ROCKS[i]);
   }
-  
+
   alert(`YOU LOSE!`);
 }
 
 function moveDodger(e) {
   // implement me!
+  document.addEventListener('keydown', function(e) {
+    if (e.which === 37) {
+      moveDodgerLeft()
+    }
+    else if(e.which === 39){
+      moveDodgerRight();
+    }
+  })
   /**
    * This function should call `moveDodgerLeft()`
    * if the left arrow is pressed and `moveDodgerRight()`
