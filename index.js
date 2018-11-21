@@ -83,7 +83,12 @@ function createRock(x) {
      */
      if(checkCollision(rock)){
        endGame();
+     } else if(rock.style.top === 400) {
+         GAME.removeChild(rock);
+     } else {
+       rock.style.top += 2;
      }
+
 
     /**
      * Otherwise, if the rock hasn't reached the bottom of
