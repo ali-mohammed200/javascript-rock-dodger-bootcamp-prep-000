@@ -86,7 +86,7 @@ function createRock(x) {
      if(checkCollision(rock)){
        return endGame();
      } else if(top === 400) {
-         GAME.removeChild(rock);
+         rock.remove();
      } else {
        rock.style.top = `${top += 5}px`;
        if (top < 400) {
